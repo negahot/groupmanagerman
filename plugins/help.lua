@@ -52,9 +52,14 @@ local function do_keybaord_credits()
 	local keyboard = {}
     keyboard.inline_keyboard = {
     	{
-    		{text = 'Channel', url = 'https://telegram.me/'..config.channel:gsub('@', '')},
-    		{text = 'GitHub', url = 'https://github.com/RememberTheAir/GroupButler'},
-    		{text = 'Rate me!', url = 'https://telegram.me/storebot?start='..bot.username},
+    		{text = '📢Channel', url = 'https://telegram.me/'..config.channel:gsub('@', '')},
+    		},
+    	{
+    		{text = '👤admin', url = 'https://telegram.me/amirrezaebrahimi'},
+    		{text = '⭐️Rate me!', url = 'https://telegram.me/storebot?start='..bot.username},
+		},
+	{
+    		{text = '↗️ Create Your  🌐Website', url = 'http://weblogg.ir/wp-signup.php'},
 		},
 		{
 		    {text = '🔙', callback_data = '!user'}
@@ -71,8 +76,11 @@ local function do_keyboard_private()
     		{text = '📢 Bot channel', url = 'https://telegram.me/'..config.channel:gsub('@', '')},
 	    },
 	    {
-	        {text = '📕 All the commands', callback_data = '!user'}
+	        {text = '📕 All the commands', callback_data = '!user'},
         }
+        {
+    		{text = '↗️ Create Your  🌐Website', url = 'http://weblogg.ir/wp-signup.php'},
+		}
     }
     return keyboard
 end
@@ -82,7 +90,10 @@ local function do_keyboard_startme()
     keyboard.inline_keyboard = {
     	{
     		{text = 'Start me', url = 'https://telegram.me/'..bot.username}
-	    }
+	    },
+	      {
+    		{text = '↗️ Create Your  🌐Website', url = 'http://weblogg.ir/wp-signup.php'},
+		}
     }
     return keyboard
 end
